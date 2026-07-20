@@ -3,141 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tahreen & Faiz</title>
 
-<title>Tahreen & Faiz | Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+body{
+background:#fdf8f4;
+font-family:Poppins,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
 
-<link rel="stylesheet" href="style.css">
+.card{
+width:350px;
+height:600px;
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+animation:zoom 1.5s ease;
+position:relative;
+}
+
+@keyframes zoom{
+from{
+transform:scale(.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.hero{
+height:60%;
+background:url("images/couple.png") center/cover;
+}
+
+.content{
+padding:25px;
+text-align:center;
+}
+
+h1{
+font-family:Cinzel;
+font-size:30px;
+color:#8b0000;
+}
+
+.date{
+margin-top:10px;
+font-size:18px;
+color:#555;
+}
+
+.place{
+margin-top:15px;
+line-height:1.8;
+color:#666;
+}
+
+.btn{
+margin-top:25px;
+display:inline-block;
+padding:14px 35px;
+background:#8b0000;
+color:white;
+border-radius:50px;
+text-decoration:none;
+transition:.4s;
+}
+
+.btn:hover{
+background:#b22222;
+transform:scale(1.05);
+}
+
+.fade{
+animation:fadeUp 2s;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
 </head>
 
 <body>
 
-<!-- Loading Screen -->
-<div id="loading">
-<!-- Envelope Section -->
-
-<section id="envelopeSection" class="hidden">
-
-<div class="envelope">
-
-<div class="flap"></div>
-
-<div class="letter">
-
-<h2>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h2>
-
-<h1>Tahreen ❤️ Faiz</h1>
-
-<p>
-You are lovingly invited to celebrate
-our Nikah ceremony.
-</p>
-
-<button id="openCard">
-Open Invitation
-</button>
-
-</div>
-
-</div>
-
-</section>
-<!-- Wedding Card -->
-<!-- Scratch Card -->
-
-<section id="scratchSection">
-
-<div class="scratch-card">
-
-<h2>🎁 Special Surprise</h2>
-
-<p>Scratch below to reveal our wedding date</p>
-
-<div id="scratchBox">
-
-<div id="cover">
-Scratch Here ✨
-</div>
-
-<div id="reveal">
-<h1>4 December 2026</h1>
-<p>After Maghrib • 7:00 PM</p>
-</div>
-
-</div>
-
-<button id="nextCouple">
-Continue ❤️
-</button>
-
-</div>
-
-</section>
-
-<section id="cardSection" class="hidden">
-
 <div class="card">
 
-<h3>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h3>
+<div class="hero"></div>
 
-<h1>Tahreen <span>&</span> Faiz</h1>
+<div class="content fade">
 
-<p class="quote">
-"And We created you in pairs."
-<br>
-(Quran 78:8)
-</p>
+<h1>Tahreen <br>&<br> Faiz</h1>
 
-<div class="details">
-
-<p>📅 4 December 2026</p>
-
-<p>🕌 After Maghrib • 7:00 PM</p>
-
-<p>📍 Ahmed Lawn Hall<br>
-Next to Petrol Pump, Mumbra</p>
-
+<div class="date">
+04 December 2026
 </div>
 
-<button id="continueBtn">
-Continue ✨
-</button>
+<div class="place">
+After Maghrib • 7:00 PM<br><br>
 
+Ahmed Lawn Hall<br>
+Next to Petrol Pump<br>
+Mumbra
 </div>
 
-</section>
-<div class="moon"></div>
-
-<h2 class="bismillah">
-﷽
-</h2>
-
-<p class="welcome">
-In the Name of Allah,<br>
-The Most Merciful,<br>
-The Most Compassionate
-</p>
-
-<h1 class="names">
-Tahreen <span>&</span> Faiz
-</h1>
-
-<p class="subtitle">
-A Journey Written by Allah,<br>
-Celebrated with Love.
-</p>
-
-<button id="enterBtn">
+<a class="btn" href="#next">
 Open Invitation
-</button>
+</a>
 
 </div>
 
-<script src="script.js"></script>
+</div>
 
 </body>
 </html>
