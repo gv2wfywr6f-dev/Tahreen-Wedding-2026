@@ -120,3 +120,85 @@ body{
 }
 
 }
+/* ---------- Envelope Section ---------- */
+
+.hidden{
+    display:none;
+}
+
+#envelopeSection{
+    width:100%;
+    min-height:100vh;
+    background:linear-gradient(180deg,#0d1b2a,#152238);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.envelope{
+    position:relative;
+    width:340px;
+    height:230px;
+    background:#f8f2e8;
+    border-radius:12px;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+    overflow:hidden;
+}
+
+.flap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:120px;
+    background:#d4af37;
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    z-index:3;
+}
+
+.letter{
+    position:absolute;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    height:170px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    padding:20px;
+    transition:.8s;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.letter h2{
+    font-size:18px;
+    color:#c9a227;
+    margin-bottom:10px;
+}
+
+.letter h1{
+    font-family:'Cinzel',serif;
+    color:#0d1b2a;
+    margin-bottom:10px;
+}
+
+.letter p{
+    color:#444;
+    line-height:1.6;
+}
+
+#openCard{
+    margin-top:18px;
+    background:#c9a227;
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.envelope:hover .letter{
+    transform:translateY(-55px);
+}
