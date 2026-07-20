@@ -1,61 +1,71 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 
-    const enterBtn = document.getElementById("enterBtn");
-    const loading = document.getElementById("loading");
-    const envelopeSection = document.getElementById("envelopeSection");
-    const openCard = document.getElementById("openCard");
-    const cardSection = document.getElementById("cardSection");
-    const continueBtn = document.getElementById("continueBtn");
+const enterBtn=document.getElementById("enterBtn");
+const loading=document.getElementById("loading");
 
-    // Hide sections initially
-    envelopeSection.style.display = "none";
-    cardSection.style.display = "none";
+const envelope=document.getElementById("envelopeSection");
+const openCard=document.getElementById("openCard");
 
-    // Open Invitation Button
-    enterBtn.addEventListener("click", () => {
+const card=document.getElementById("cardSection");
+const continueBtn=document.getElementById("continueBtn");
 
-        enterBtn.innerHTML = "Opening...";
+const scratch=document.getElementById("scratchSection");
+const cover=document.getElementById("cover");
+const next=document.getElementById("nextCouple");
 
-        loading.style.transition = "1s";
-        loading.style.opacity = "0";
+envelope.style.display="none";
+card.style.display="none";
+scratch.style.display="none";
 
-        setTimeout(() => {
+enterBtn.onclick=()=>{
 
-            loading.style.display = "none";
+loading.style.opacity="0";
 
-            envelopeSection.style.display = "flex";
-            envelopeSection.style.opacity = "0";
+setTimeout(()=>{
 
-            setTimeout(() => {
+loading.style.display="none";
+envelope.style.display="flex";
 
-                envelopeSection.style.transition = "1s";
-                envelopeSection.style.opacity = "1";
+},1000);
 
-            }, 100);
+}
 
-        }, 1000);
+openCard.onclick=()=>{
 
-    });
+document.querySelector(".letter").style.transform="translateY(-140px)";
 
-    // Open Envelope
-    openCard.addEventListener("click", () => {
+setTimeout(()=>{
 
-        document.querySelector(".letter").style.transform = "translateY(-140px)";
+envelope.style.display="none";
+card.style.display="flex";
 
-        setTimeout(() => {
+},1000);
 
-            envelopeSection.style.display = "none";
-            cardSection.style.display = "flex";
+}
 
-        }, 1200);
+continueBtn.onclick=()=>{
 
-    });
+card.style.display="none";
+scratch.style.display="flex";
 
-    // Continue Button (Temporary)
-    continueBtn.addEventListener("click", () => {
+}
 
-        alert("Next section coming in Part 4 ✨");
+cover.onclick=()=>{
 
-    });
+cover.style.opacity="0";
+
+setTimeout(()=>{
+
+cover.style.display="none";
+
+},800);
+
+}
+
+next.onclick=()=>{
+
+alert("Next: Pinterest Couple Section ❤️");
+
+}
 
 });
