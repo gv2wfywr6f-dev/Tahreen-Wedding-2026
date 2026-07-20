@@ -202,3 +202,114 @@ body{
 .envelope:hover .letter{
     transform:translateY(-55px);
 }
+/* Wedding Card */
+
+#cardSection{
+display:none;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:30px;
+background:linear-gradient(180deg,#10223b,#0d1b2a);
+}
+
+.card{
+
+width:90%;
+max-width:450px;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+animation:fadeUp 1s;
+
+}
+
+.card h3{
+
+color:#c9a227;
+
+font-size:28px;
+
+}
+
+.card h1{
+
+margin:20px 0;
+
+font-family:'Cinzel',serif;
+
+color:#0d1b2a;
+
+}
+
+.card span{
+
+color:#c9a227;
+
+}
+
+.quote{
+
+font-style:italic;
+
+color:#666;
+
+margin-bottom:25px;
+
+}
+
+.details p{
+
+margin:15px 0;
+
+color:#333;
+
+}
+
+#continueBtn{
+
+margin-top:30px;
+
+padding:14px 35px;
+
+background:#c9a227;
+
+color:white;
+
+border:none;
+
+border-radius:40px;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
